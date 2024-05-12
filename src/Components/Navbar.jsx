@@ -1,10 +1,7 @@
-
-import React from 'react';
-
 function Navbar() {
   return (
-    <nav>
-      {/* Navbar content */}
+    <nav className="navbar">
+      <h1>Library Managment System</h1>
     </nav>
   );
 }
