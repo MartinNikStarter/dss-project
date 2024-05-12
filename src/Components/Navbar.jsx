@@ -1,7 +1,10 @@
+
+import React from 'react';
+
 function Navbar() {
   return (
-    <nav className="navbar">
-      <h1>Book Managment System</h1>
+    <nav>
+      {/* Navbar content */}
     </nav>
   );
 }
