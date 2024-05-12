@@ -1,6 +1,6 @@
 import React from "react";
 
-function BookDetails({
+function BookForm({
   selectedBook,
   handleInputChange,
   handleSave,
