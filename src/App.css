@@ -1,114 +1,84 @@
-body{
-    margin: 0px;
-}
-main{
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-}
-
-.navbar {
-    list-style-type: none;
-    background-color: rgb(39, 39, 39);
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-}
-.navbar h1{
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: left;
+/* App.css */
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-  footer {
-    margin-top: auto;
-    background-color: rgb(39, 39, 39);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
- 
-  .deleteButton {
-    margin-left: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: red;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .content-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    flex: 1;
- 
-  }
-  
-  .content-details h2 {
-    font-size: 1.5rem;
-  }
-  
-  .content-details form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .content-details input,
-  .content-details button {
-    margin-bottom: 10px;
-    padding: 5px;
-  }
-  
-  .content-details button {
-    background-color: green;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .content-details button:last-child {
-    background-color: red;
-  }
-  
-  .content-list {
-    flex: 1;
-  padding: 20px;
-    margin-top: 20px;
-  }
-  
-  .content-list h2 {
-    font-size: 1.5rem;
-  }
-  
-  .content-list ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .content-list li {
-    border-bottom: 1px solid #ccc;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .content-list li:hover {
-    background-color: #f4f4f4;
-  }
-  
-  .content-list .deleteButton {
-    background-color: red;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 10px;
-  }
-  
-  
+nav, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.content-list {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.content-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-list li {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.content-list li:hover {
+  background-color: #ddd;
+}
+
+.content-list li p {
+  margin: 5px 0;
+}
+
+.deleteButton {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #c9302c;
+}
+
+.content-details {
+  width: 50%;
+}
+
+.content-details form {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-details input, .content-details button {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.content-details button {
+  background-color: #5bc0de;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.content-details button:hover {
+  background-color: #46b8da;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
