@@ -1,5 +1,5 @@
 function Footer() {
-    return <footer>DSS Project - Martin Nikolov</footer>;
+    return <footer>Martin Nikolov's Project</footer>;
   }
   
   export default Footer;
