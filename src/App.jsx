@@ -18,7 +18,10 @@ function App() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -57,10 +60,11 @@ function App() {
         onBookSelect={handleBookSelect}
         onDeleteBook={handleDeleteBook}
       />
-      <DetailsSection
-        formData={formData}
-        onInputChange={handleInputChange}
-        onSubmit={handleSubmit}
+     <DetailsSection
+      formData={formData}
+      onInputChange={handleInputChange}
+      onSubmit={handleSubmit}
+      setFormData={setFormData}
       />
       <Footer />
     </div>
