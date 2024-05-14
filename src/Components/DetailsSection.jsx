@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DetailsSection({ formData, onInputChange, onSubmit }) {
+function DetailsSection({ formData, onInputChange, onSubmit, setFormData }) {
   return (
     <div className="content-details">
       <form onSubmit={onSubmit}>
@@ -50,7 +50,13 @@ function DetailsSection({ formData, onInputChange, onSubmit }) {
           required
         />
         <button type="submit" id="saveButton">Save</button>
-        <button type="button" id="clearButton" onClick={() => setFormData({})}>Clear</button>
+        <button type="button" id="clearButton" onClick={() => setFormData({
+          title: '',
+          author: '',
+          isbn: '',
+          price: '',
+          publicationDate: ''
+        })}>Clear</button>
       </form>
     </div>
   );
