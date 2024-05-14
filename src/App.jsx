@@ -18,6 +18,7 @@ function App() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    console.log(`Updating ${name} to ${value}`);
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value
