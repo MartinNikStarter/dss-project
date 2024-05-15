@@ -65,6 +65,7 @@ function App() {
     const updatedBooks = books.filter(book => book.id !== id);
     setBooks(updatedBooks);
     setSelectedBook(null);
+    setIsEditing(false);
   };
 
   return (
