@@ -59,6 +59,7 @@ function App() {
       price: book.price,
       publicationDate: book.publicationDate
     });
+    setIsEditing(true);
   };
 
   const handleDeleteBook = (id) => {
