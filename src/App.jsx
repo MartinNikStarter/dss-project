@@ -31,8 +31,15 @@ function App() {
       alert('All fields are mandatory');
       return;
     }
-    const newBook = { ...formData, id: books.length + 1 };
-    setBooks([...books, newBook]);
+    if (selectedBook) {
+      const updatedBooks = books.map((book) =>
+        book.id === selectedBook.id ? { ...formData, id: selectedBook.id } : book
+      );
+      setBooks(updatedBooks);
+    } else {
+      const newBook = { ...formData, id: books.length + 1 };
+      setBooks([...books, newBook]);
+    }
     setFormData({
       title: '',
       author: '',
@@ -40,10 +47,18 @@ function App() {
       price: '',
       publicationDate: ''
     });
+    setSelectedBook(null);
   };
 
   const handleBookSelect = (book) => {
     setSelectedBook(book);
+    setFormData({
+      title: book.title,
+      author: book.author,
+      isbn: book.isbn,
+      price: book.price,
+      publicationDate: book.publicationDate
+    });
   };
 
   const handleDeleteBook = (id) => {
